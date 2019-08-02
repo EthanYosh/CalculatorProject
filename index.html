@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Ethan Yoshioka">
-  <meta name="description" content"A simple, aesthetically pleasing calculator made with HTML, CSS< and Javascript!">
+  <meta name="description" content"A simple, aesthetically pleasing calculator made with HTML, CSS, and Javascript!">
   <meta name="application-name" content"EthanYosh's Calculator">
-  <meta name="generator" content"Calculator 1.0.0">
+  <meta name="generator" content"Calculator 1.0.0"> <!--Use generator only on applications - I use it here because a calculator is an application. -->
 
-  <title>EthanYosh - Calculator</title>
+  <title>EthanYosh - Calculator</title> <!--this is what shows up in the tab on browsers -->
 
   <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+
   <link href="bring-it-to-life.css" rel="stylesheet">
   <script src="the-magic.js" defer></script>
 
@@ -23,29 +24,28 @@
   <div class="entire-calculator">
 
     <div class="answer">
-        <div class="input1-with-operator">123+</div>
-        <div class="input2">456</div>
+        <div data-input1 class="input1-with-operator"></div> <!--data is for selecting in javascript, and class is for styling with css in this case -->
+        <div data-input2 class="input2"></div>
     </div>
-    <button class="bigger-button">AC</button>
-    <button>DEL</button>
-    <button>÷</button>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>*</button>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button>+</button>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-    <button>-</button>
-    <button>.</button>
-    <button>0</button>
-    <button class="bigger-button">=</button>
+    <button data-allclear class="bigger-button">AC</button>
+    <button class="thisDelete" data-delete>DEL</button>
+    <button class="thisOperator" data-operator>÷</button>
+    <button class="thisThing" data-num>1</button>
+    <button class="thisThing" data-num>2</button>
+    <button class="thisThing" data-num>3</button>
+    <button class="thisOperator" data-operator>x</button>
+    <button class="thisThing" data-num>4</button>
+    <button class="thisThing" data-num>5</button>
+    <button class="thisThing" data-num>6</button>
+    <button class="thisOperator" data-operator>+</button>
+    <button class="thisThing" data-num>7</button>
+    <button class="thisThing" data-num>8</button>
+    <button class="thisThing" data-num>9</button>
+    <button class="thisOperator" data-operator>-</button>
+    <button class="thisThing" data-num>.</button>
+    <button class="thisThing" data-num>0</button>
+    <button data-equals class="bigger-button">=</button>
 
   </div>
-
 </body>
 </html>

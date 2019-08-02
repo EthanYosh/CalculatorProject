@@ -1,11 +1,11 @@
 *, *::before,*::after {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Use this so that when I set width and height, it doesnt include paddings and stuff. Always do this. */
   font-family: 'Varela Round', sans-serif;
   font-weight: bold;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* good practice because makes math easier when using rem*/
 }
 
 
@@ -14,7 +14,8 @@ body {
   margin: 0;
   background-image: linear-gradient(to bottom, #00FFFF, #66CDAA);
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; /* fixed doesnt scroll with the page, local will scroll with page contents, scroll is default and will scroll with the page */
+  background-position: center;
 
 }
 
@@ -26,12 +27,12 @@ body {
   min-height: 100vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  padding: 5px solid rgb(107, 85, 126);
 }
 
 
 .entire-calculator > button {
   cursor: crosshair;
-  font-size: 2rem;
   border: 1px solid #20B2AA
   outline: none; /* <-- outline is something browsers put in by default that we don't need! */
   background-color: rgba(255, 255, 255, 0.70);
@@ -45,6 +46,19 @@ body {
 
 .bigger-button{
   grid-column: span 2;
+  font-size: 2.75rem;
+}
+
+.thisOperator{
+  font-size: 3rem;
+}
+
+.thisThing{
+  font-size: 3rem;
+}
+
+.thisDelete{
+  font-size: 2.75rem;
 }
 
 .answer {
